@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: #fff;
+    --secondary: #64676d;
+    --line: #22252e;
+    --neutralAlt: #1b1d23;
+    --neutral: #0e1118;
+    --overlay: #0e1118;
+    --brandAlt: #0da098;
+    --brand: #ff5c28;
+    color-scheme: dark;
+}
+body{
+    background:#000;
+    color: #fff;
+    font-feature-settings: "tnum","tnum";
+    font-variant: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+    font-family: IBM Plex Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+hr {
+    border-top: 0 solid var(--secondary);
+    width: 80%;
+    /* text-align: center; */
+    margin: 2em 9em;
+    opacity: 0.2;
+  }
+
+/* ***** Navbar******* */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    flex-direction:row;
+    padding: 1.25em 150px;
+    text-transform: capitalize;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.solend-link{
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav-item{
+    opacity: 0.5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.start-btn{
+    background:var(--brand);
+    height: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--brand);
+    width: 8em;
+}
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    .nav-item{
+        margin: 1.25em;
+        background:var(--secondary);
+        padding: 1.25em;
+    }
+    .start-btn{
+        width: 100%;
+    }
+}
+.start-btn:hover{
+    cursor: pointer;
+}
+/* **** content**** */
+.content{
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    line-height: 76px;
+    /* max-width: 900px; */
+    width: 48%;
+    margin: 0.5em 0 0 2em;
+}
+.stats{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 1em 2em;
+    /* border-bottom: 1px solid var(--secondary); */
+    padding-bottom: 2em;
+}
+.stats-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+}
+.stats-para{
+    font-size: 20px;
+    font-weight: 300;
+    width: 70%;
+    margin-right: 1em;
+    line-height: 1.5em;
+}
+.stats-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.stats-info-content{
+    opacity: 0.5;
+    font-size: 20px;
+    font-weight: 300;
+    /* margin-bottom: 0.5em; */
+    margin-bottom: 0.25em;
+}
+.stats-info-num{
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    line-height: 76px;
+    max-width: 900px;
+}
+.stats-img{
+    margin-right: 2em;
+    border-style: none;
+    vertical-align: middle;
+    height: 50%;
+    width: 50%;
+}
+@media screen and (max-width:768px){
+    .stats{
+        margin: auto;
+    }
+    .stats-info-num{
+        font-size: 36px;
+    }
+}
+
+/* ******Perks******** */
+.perks{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 8em;
+}
+
+.perks-card-heading{
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1.5;
+    letter-spacing: 1.25px;
+}
+
+.perks-card-content{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--neutralAlt);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .perks{
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+/* ********teams********* */
+.team{
+    display: flex;
+    flex-direction:column;
+    /* margin-top: 1em; */
+    margin: 2em 10em;
+    /* margin: auto; */
+}
+.team-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* gap: 10px; */
+    row-gap: 10px;
+}
+.team-heading{
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1.5;
+    letter-spacing: 1.25px;
+}
+.team-card{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 200px;
+    width: 356px;
+    background-color: var(--neutralAlt);
+    font-weight: 700;
+    font-size: 20px;
+}
+@media screen and (max-width:768px){
+    .team-cards{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+}
+
+/* *******Investors********** */
+.investors{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
+    width: 80%;
+    margin:auto;
+}
+.investors-heading{
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1.5;
+    letter-spacing: 1.25px;
+    margin-left: 9em;
+}
+.inv-img{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.inv-img>img{
+    height: 50%;
+    width: 60%;
+}
+.img-1{
+    grid-column: span 2;
+}
+
+.img-2{
+    grid-column: 3/span 3;
+}
+.img-3{
+    grid-column: 1/span 2;
+}
+.img-5{
+    /* grid-column: 4/span 6; */
+    grid-column: 4/-1;
+}
+.img-12{
+    grid-column: span 2;
+}
+
+/* *****Footer****** */
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7em;
+}
+.footer-link{
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 13px;
+}
+.footer-link:hover{
+    color: var(--primary);
+}
+.footer-para{
+    text-align: center;
+    color: var(--secondary);
+    font-size: 13px;
+    margin: 6em 0 4em 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: IBM, 'Courier New', monospace; */
+}
